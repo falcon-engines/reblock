@@ -1,0 +1,8 @@
+# Dark Mode Engine
+[darkmode]
+    status = false      # true, false               # enable darkmode
+
+
+# Site Multi language
+[multilang]
+    status = false      #true / false               # enable multiple language features
