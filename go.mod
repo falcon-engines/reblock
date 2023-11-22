@@ -1,3 +1,3 @@
-module github.com/rozard-falcon/reblock
+module github.com/rozard-engines/reblock
 
 go 1.21.4
