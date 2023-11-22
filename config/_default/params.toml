@@ -1,0 +1,9 @@
+[reblock]
+    [reblock.assets]
+        [reblock.assets.styles]
+            head = [ "base" ]
+            foot = [ "base" ]
+        [reblock.assets.script]
+            head = [ "main" ]
+            foot = [ "main" ]
+
