@@ -17,23 +17,23 @@
 
 
 ## -----------------------
-##  engine directory
+##  render directory
 ## -----------------------
 
 [[mounts]]
-    source = 'engine/blocks'
+    source = 'render/blocks'
     target = 'layouts/partials/shortcodes'
 
 [[mounts]]
-    source = 'engine/paged'
+    source = 'render/paged'
     target = 'layouts/_default'
 
 [[mounts]]
-    source = 'engine/parted'
+    source = 'render/parted'
     target = 'layouts/partials/reblock/parted/'
 
 [[mounts]]
-    source = 'engine/section'
+    source = 'render/section'
     target = 'layouts/partials/reblock/section/'
 
 
