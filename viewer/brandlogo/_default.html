@@ -1,0 +1,23 @@
+{{ $model      := .Site.Params.base_model.logos }}
+{{ $darks_logo := "glyph/icons/brand/lektor.svg" }}
+{{ $light_logo := "glyph/icons/brand/lektor.svg" }}
+{{ $site_title := "" }}
+{{ $site_leads := "" }}
+{{ if .Site.Params.site_meta.logo_darks }}
+    {{ $darks_logo = .Site.Params.site_meta.logo_darks  }}
+{{ end }}
+{{ if .Site.Params.site_meta.logo_light }}
+    {{ $light_logo = .Site.Params.site_meta.logo_light  }}
+{{ end }}
+{{ if .Site.Params.title }}
+    {{ $site_title = .Site.Params.title  }}
+{{ end }}
+{{ if .Site.Params.site_meta.leads }}
+    {{ $site_leads = .Site.Params.site_meta.leads  }}
+{{ end }}
+
+<div class="site-logo flex horizontal">
+    <figure class="box" data-logodark="{{ $darks_logo }}">
+        <img class="image" src="/{{ $light_logo }}" alt="{{ .Site.Params.title }} main logo" width="52" height="52">
+    </figure>
+</div>
