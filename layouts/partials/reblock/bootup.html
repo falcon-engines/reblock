@@ -1,2 +1,10 @@
 <!-- bootup core module -->
 {{ partial "packscript" ( dict "ctx" . "config" .Site.Params.reblock.assets "module" "reblock" ) }}
+
+
+<!-- block darkmode script -->
+{{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/darkmode/head/main.js" ) }} 
+
+{{ if .Store.Get "reblock_darkmode" }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/darkmode/foot/main.js" ) }}
+{{ end }}
