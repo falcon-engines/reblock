@@ -1,0 +1,18 @@
+
+    <div class="lang-menu dropdown mx-1 ">
+        <div class="action flex center-x">
+            {{ partial "icons" ( dict "name" "translate" ) }}
+        </div>
+        <div class="menu d-hide">
+        {{ range .Site.Home.AllTranslations }}
+            <div class="item">
+                <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+            </div>
+        {{ end }}
+        </div>
+    </div>
+
+    <!-- multilang dropdown sync assests -->
+    {{- .Page.Store.Set "multilang_dropdown" true -}}
+
+

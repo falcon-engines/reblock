@@ -1,0 +1,27 @@
+{{ $type := .type }}
+{{ $skin := .skin }}
+{{ $ctxt := .ctx }}
+
+
+{{ if eq $type "brandlogo" }}
+    {{ $template := print "reblock/brandlogo/" $skin }}
+    {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
+        {{ partial $template $ctxt  }}
+    {{ end }}
+{{ end }}
+
+
+{{ if eq $type "langmenu" }}
+    {{ $template := print "reblock/langmenu/" $skin }}
+    {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
+        {{ partial $template $ctxt  }}
+    {{ end }}
+{{ end }}
+
+
+{{ if eq $type "darkmode" }}
+    {{ $template := print "reblock/darkmode/" $skin }}
+    {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
+        {{ partial $template $ctxt  }}
+    {{ end }}
+{{ end }}

@@ -1,0 +1,12 @@
+
+<div id="dark-mode" class="dark-mode dropdown mx-1"> 
+    <div class="action flex center-x">
+        <p class="title no-mp fz-100">{{- T "appearance_menu" -}} </p>
+        {{ partial "icons"  ( dict "ctx" .  "name" "chevron-down" ) }}
+    </div>
+    <div class="menu d-hide">
+        <div class="item" data-themeset="auto"><span class="check"></span>  Automatic </div>
+        <div class="item" data-themeset="dark"><span class="check"></span>  Dark Theme </div>
+        <div class="item" data-themeset="light"><span class="check"></span> Light Theme </div>
+    </div>
+</div>
