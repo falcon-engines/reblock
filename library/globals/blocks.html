@@ -1,0 +1,10 @@
+{{ $name := .name }}
+{{ $skin := .skin }}
+{{ $list := slice  "brandlogo" "darkmode" "langmenu"  }}
+
+{{ if in $name slice }}
+    {{ $template := print "blocks/skined/" $name "/" $skin " }}
+    {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
+        {{ partial $template ( dict "ctx" .ctx ) }}
+    {{ end }}
+{{ end }}

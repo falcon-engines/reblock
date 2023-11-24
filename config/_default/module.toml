@@ -17,36 +17,12 @@
 
 
 ## -----------------------
-##  render directory
-## -----------------------
-
-[[mounts]]
-    source = 'render/blocks'
-    target = 'layouts/partials/shortcodes'
-
-[[mounts]]
-    source = 'render/paged'
-    target = 'layouts/_default'
-
-[[mounts]]
-    source = 'render/parted'
-    target = 'layouts/partials/reblock/parted/'
-
-[[mounts]]
-    source = 'render/section'
-    target = 'layouts/partials/reblock/section/'
-
-
-## -----------------------
 ##  library directory
 ## -----------------------
 
-[[mounts]]
-    source = 'library/format'
-    target = 'archetypes'
 
 [[mounts]]
-    source = 'library/global'
+    source = 'library/globals'
     target = 'layouts/partials'
 
 [[mounts]]
@@ -57,19 +33,28 @@
     source = 'library/langua'
     target = 'i18n'
 
-[[mounts]]
-    source = 'library/metad'
-    target = 'layouts/partials/metadata'
+## -----------------------
+##  render directory
+## -----------------------
 
+
+[[mounts]]
+    source = 'render/blocks'
+    target = 'layouts/partials/shortcodes'
+
+
+[[mounts]]
+    source = 'render/parted'
+    target = 'layouts/partials/blocks'
 
 
 ## -----------------------
-##  module directory
+##  skined directory
 ## -----------------------
 
 [[mounts]]
-    source = 'module'
-    target = 'static'
+    source = 'skined'
+    target = 'layouts/partials/blocks/skined'
 
 
 ## -----------------------
