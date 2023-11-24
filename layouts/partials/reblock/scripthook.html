@@ -5,6 +5,14 @@
 <!-- block darkmode script -->
 {{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/darkmode/head/main.js" ) }} 
 
-{{ if .Store.Get "reblock_darkmode" }}
+{{ if .Page.Scratch.Get "reblock_darkmode" }}
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/darkmode/foot/main.js" ) }}
+{{ end }}
+
+
+<!-- block langmenu script -->
+{{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/langmenu/head/main.js" ) }} 
+
+{{ if .Page.Scratch.Get "reblock_darkmode" }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/langmenu/foot/main.js" ) }}
 {{ end }}

@@ -12,6 +12,7 @@
     {{ $template := print "reblock/langmenu/" $skin }}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
         {{ partial $template ( dict "ctx"  .ctx  )  }}
+        {{- .ctx.Page.Scratch.Set "reblock_langmenu" true -}}
     {{ end }}
 {{ end }}
 
@@ -20,7 +21,6 @@
     {{ $template := print "reblock/darkmode/" $skin }}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
         {{ partial $template ( dict "ctx"  .ctx  )  }}
-        {{- .ctx.Store.Set "reblock_darkmode" true -}}
+        {{- .ctx.Page.Scratch.Set "reblock_darkmode" true -}}
     {{ end }}
 {{ end }}
-

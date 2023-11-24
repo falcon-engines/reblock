@@ -1,18 +1,13 @@
-<div class="lang-menu dropdown mx-1 ">
+<div id="lang-menu" class="lang-menu dropdown mx-1 ">
     <div class="action flex center-x">
         <p class="title no-mp fz-100">{{- T "lang_menu" -}} </p>
         {{ partial "icons"  ( dict "ctx" .  "name" "chevron-down" ) }}
     </div>
     <div class="menu d-hide">
-    {{ range .Site.Home.AllTranslations }}
+    {{ range .ctx.Site.Home.AllTranslations }}
         <div class="item">
             <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
         </div>
     {{ end }}
     </div>
 </div>
-
-<!-- multilang dropdown sync assests -->
-{{- .Page.Store.Set "multilang_dropdown" true -}}
-
-
