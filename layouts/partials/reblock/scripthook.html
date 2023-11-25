@@ -21,3 +21,13 @@
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/_general/dropdown/foot.js" ) }}
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/langmenu/foot/main.scss" ) }}
 {{ end }}
+
+
+
+
+<!-- langmenu head -->
+
+<!-- langmenu foot -->
+{{ if .Page.Scratch.Get "reblock_hamburger" }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/hamburger/foot/main.scss" ) }}
+{{ end }}

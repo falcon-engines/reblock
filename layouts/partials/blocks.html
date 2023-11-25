@@ -24,3 +24,12 @@
         {{- .ctx.Page.Scratch.Set "reblock_darkmode" true -}}
     {{ end }}
 {{ end }}
+
+
+{{ if eq $type "hamburger" }}
+    {{ $template := print "reblock/hamburger/" $skin }}
+    {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
+        {{ partial $template ( dict "ctx"  .ctx  )  }}
+        {{- .ctx.Page.Scratch.Set "reblock_hamburger" true -}}
+    {{ end }}
+{{ end }}

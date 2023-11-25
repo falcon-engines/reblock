@@ -1,6 +1,6 @@
 {{ $model      := .Site.Params.base_model.logos }}
-{{ $darks_logo := "brand/falcon.png" }}
-{{ $light_logo := "brand/falcon.png" }}
+{{ $darks_logo := "brand/falcon.webp" }}
+{{ $light_logo := "brand/falcon.webp" }}
 {{ $site_title := "" }}
 {{ $site_leads := "" }}
 {{ if $.Site.Params.site_meta.logo_darks }}
@@ -15,6 +15,7 @@
 {{ if .Site.Params.site_meta.leads }}
     {{ $site_leads = .Site.Params.site_meta.leads  }}
 {{ end }}
+
 
 
 <a href="{{ .Site.BaseURL }}" class="site-logo flex align-x">

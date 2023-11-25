@@ -7,9 +7,7 @@
         let target = opened.querySelector('.menu');
         let action = Array.prototype.slice.call( target.querySelectorAll('.item') );
         let getdat = new Date().getHours();
-       
     
-
         triger.addEventListener('click', () => {
             target.dataset.darkmenu = localStorage.getItem('darkmode');
         });
