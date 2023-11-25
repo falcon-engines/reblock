@@ -18,6 +18,6 @@
 
 <a href="{{ .Site.BaseURL }}" class="site-logo flex align-x">
     <figure class="box" data-logodark="{{ $darks_logo }}">
-        <img class="image" src="/{{ $light_logo }}" alt="{{ .Site.Params.title }} main logo" width="52" height="52">
+        <img fetchpriority="high" class="image" src="/{{ $light_logo }}" alt="{{ .Site.Params.title }} main logo" width="52" height="52">
     </figure>
 </a>
