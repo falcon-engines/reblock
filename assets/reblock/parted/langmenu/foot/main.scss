@@ -1,0 +1,15 @@
+.lang-menu {
+    .item{
+        color: var(--color-text-1);
+        text-decoration: none;
+    }
+    .check{
+        display: block;
+        width: 8px;
+        height: 8px;
+    }
+    .check.active {
+        background-color: #0072ff;
+        border-radius: 50px;
+    }
+}

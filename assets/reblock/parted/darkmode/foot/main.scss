@@ -1,0 +1,15 @@
+.dark-mode {
+
+    .check{
+        display: block;
+        width: 8px;
+        height: 8px;
+    }
+
+    .menu[data-darkmenu="auto"] .auto,
+    .menu[data-darkmenu="dark"] .dark,
+    .menu[data-darkmenu="light"] .light {
+        background-color: #0072ff;
+        border-radius: 50px;
+    }
+}

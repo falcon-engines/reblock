@@ -1,7 +1,6 @@
 (() => {
 
     let get_dark_mode = localStorage.getItem('darkmode');
-
     let get_hour_nows = new Date().getHours();
     let get_days_nows = get_hour_nows >= 6 && get_hour_nows < 18;
 

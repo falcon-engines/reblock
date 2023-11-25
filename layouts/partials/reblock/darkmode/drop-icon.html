@@ -1,10 +1,21 @@
-<div id="dark-mode" class="dark-mode dropdown mx-1"> 
-    <div class="action flex center-x">
+<div id="dark-mode" class="dark-mode dropdown mx-1 d-hide"> 
+    <div class="action flex align-x">
         {{ partial "icons" ( dict "name" "dark-mode" ) }}
     </div>
-    <div class="menu d-hide" data-animate-duration="2000s">
-        <div class="item" data-themeset="auto"><span class="check"></span>  Automatic </div>
-        <div class="item" data-themeset="dark"><span class="check"></span>  Dark Theme </div>
-        <div class="item" data-themeset="light"><span class="check"></span> Light Theme </div>
+    <div class="menu d-hide">
+        <div class="box">
+            <div class="item flex align-x" data-themeset="auto">
+                <span class="check auto mr-1"></span>
+                <span class="name fz-85">Automatic</span>
+            </div>
+            <div class="item flex align-x" data-themeset="dark">
+                <span class="check dark mr-1"></span>
+                <sppan class="name fz-85">Dark Theme</span>
+            </div>
+            <div class="item flex align-x" data-themeset="light">
+                <span class="check light mr-1"></span>
+                <span class="name fz-85">Light Theme</span>
+            </div>
+        </div>
     </div>
 </div>

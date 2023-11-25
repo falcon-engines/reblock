@@ -1,20 +1,23 @@
-<!-- bootup core module -->
+<!-- reblock cores -->
 {{ partial "packscript" ( dict "ctx" . "config" .Site.Params.reblock.assets "module" "reblock" ) }}
 
 
-<!-- block darkmode script -->
-{{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/darkmode/head/main.js" ) }} 
-
+<!-- langmenu head -->
+{{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/darkmode/head/main.js" ) }} 
+<!-- langmenu foot -->
 {{ if .Page.Scratch.Get "reblock_darkmode" }}
-    {{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/_general/foot/dropdown.scss" ) }}
-    {{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/darkmode/foot/main.js" ) }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/_general/dropdown/foot.scss" ) }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/_general/dropdown/foot.js" ) }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/darkmode/foot/main.js" ) }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/darkmode/foot/main.scss" ) }}
 {{ end }}
 
 
-<!-- block langmenu script -->
-{{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/langmenu/head/main.js" ) }} 
-
+<!-- langmenu head -->
+{{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/langmenu/head/main.js" ) }} 
+<!-- langmenu foot -->
 {{ if .Page.Scratch.Get "reblock_darkmode" }}
-    {{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/_general/foot/dropdown.scss" ) }}
-    {{ partial "set-script" ( dict "ctx" . "link" "reblock/blocks/langmenu/foot/main.js" ) }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/_general/dropdown/foot.scss" ) }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/_general/dropdown/foot.js" ) }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/langmenu/foot/main.scss" ) }}
 {{ end }}

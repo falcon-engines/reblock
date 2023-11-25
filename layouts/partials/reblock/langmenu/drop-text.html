@@ -1,13 +1,18 @@
-<div id="lang-menu" class="lang-menu dropdown mx-1 ">
-    <div class="action flex center-x">
+<div id="lang-menu" class="lang-menu dropdown mx-1 d-hide">
+    <div class="action flex align-x">
         <p class="title no-mp fz-100">{{- T "lang_menu" -}} </p>
         {{ partial "icons"  ( dict "ctx" .  "name" "chevron-down" ) }}
     </div>
     <div class="menu d-hide">
-    {{ range .ctx.Site.Home.AllTranslations }}
-        <div class="item">
-            <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+        <div class="box">
+        {{ range .ctx.Site.Home.AllTranslations }}
+            {{ $class := "" }}
+            {{ if eq site.Language.Lang  .Language.Lang }}{{ $class = "active" }}{{ end }}
+            <a href="{{ .Permalink }}" class="item flex align-x">
+                <span class="check mr-1 {{ $class }}"></span>
+                <span class="name fz-85">{{ .Language.LanguageName }}</span>
+            </a>
+        {{ end }}
         </div>
-    {{ end }}
     </div>
 </div>
