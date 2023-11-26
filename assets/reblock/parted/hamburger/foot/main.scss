@@ -1,9 +1,15 @@
 #hamburger {
     display: block;
     position: relative;
+    width: 27px;
 
     a:hover{
         font-weight: bolder;
+    }
+
+    .hamlabel{
+        opacity: 0;
+        position: fixed;
     }
 
     .hambur {
@@ -11,7 +17,6 @@
         opacity: 0;
         width: 27px;
         height: 26px;
-        display: block;
         cursor: pointer;
         position: absolute;
     }
