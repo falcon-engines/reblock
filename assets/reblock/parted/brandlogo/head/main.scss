@@ -3,11 +3,21 @@
         text-decoration: none;
     }
     .title {
+        font-size: 120%;
+        text-transform: uppercase;
         color: var(--color-text-1);
         margin: 0;
     }
 
+    figure{
+        margin: 0;
+        width: 52px;
+        height: 52px;
+        margin-right: 0.75rem;
+    }
+
     .leads {
+        font-size: 85%;
         color: var(--color-text-3);
     }
 }

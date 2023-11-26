@@ -22,12 +22,12 @@
 {{ $layouts := .ctx.Site.Params.themes.sitelogo.layout }}
 
 
-<a href="{{ site.Home.Permalink }}" class="site-logo {{ $layouts }} flex align-x mr-3">
+<a href="{{ site.Home.Permalink }}" class="site-logo {{ $layouts }} flex align-x">
     <figure class="box" data-logodark="{{ $darks_logo }}">
         <img fetchpriority="high" class="image" src="/{{ $light_logo }}" alt="{{ .Site.Params.title }} main logo" width="52" height="52">
     </figure>
     <div class="meta">
-        {{ with $site_title }} <h1 class="title fz-120 ft-u">{{ . }}</h1>{{ end }}
-        {{ with $site_leads }} <p class="leads fz-85 no-space">{{ . }}</p> {{ end }}
+        {{ with $site_title }} <h1 class="title">{{ . }}</h1>{{ end }}
+        {{ with $site_leads }} <p class="leads no-space">{{ . }}</p> {{ end }}
     </div>
 </a>
