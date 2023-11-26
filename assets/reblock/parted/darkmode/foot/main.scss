@@ -6,6 +6,11 @@
         height: 8px;
     }
 
+    .box{
+        background: #fff;
+        background-color: var(--color-back-1);
+    }
+
     .menu[data-darkmenu="auto"] .auto,
     .menu[data-darkmenu="dark"] .dark,
     .menu[data-darkmenu="light"] .light {
