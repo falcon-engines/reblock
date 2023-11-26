@@ -6,15 +6,20 @@
         height: 8px;
     }
 
+    .title {
+        margin-left: .5rem;
+        color: var(--color-text-3);
+    }
+
     .box{
         background: #fff;
-        background-color: var(--color-back-1);
+        background: var(--color-back-2);
     }
 
     .menu[data-darkmenu="auto"] .auto,
     .menu[data-darkmenu="dark"] .dark,
     .menu[data-darkmenu="light"] .light {
-        background-color: #0072ff;
+        background: #0072ff;
         border-radius: 50px;
     }
 }

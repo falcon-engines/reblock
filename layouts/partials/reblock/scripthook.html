@@ -1,11 +1,14 @@
-<!-- reblock cores -->
-{{ partial "packscript" ( dict "ctx" . "config" .Site.Params.reblock.assets "module" "reblock" ) }}
+<!-- REBLOCKS -->
+{{ partial "packscript" ( dict "ctx" . "config" .Site.Params.reblock.assets "module" "reblock" ) }} <!-- packs -->
 
 
-<!-- langmenu head -->
-{{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/darkmode/head/main.js" ) }} 
-<!-- langmenu foot -->
-{{ if .Page.Scratch.Get "reblock_darkmode" }}
+<!-- BRANDLOGO -->
+{{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/brandlogo/head/main.scss" ) }}        <!-- head --> 
+
+
+<!-- LANGMENU -->
+{{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/darkmode/head/main.js" ) }}           <!-- head --> 
+{{ if .Page.Scratch.Get "reblock_darkmode" }}                                                       <!-- foot -->
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/_general/dropdown/foot.scss" ) }}
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/_general/dropdown/foot.js" ) }}
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/darkmode/foot/main.js" ) }}
@@ -13,21 +16,16 @@
 {{ end }}
 
 
-<!-- langmenu head -->
-{{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/langmenu/head/main.js" ) }} 
-<!-- langmenu foot -->
-{{ if .Page.Scratch.Get "reblock_darkmode" }}
+<!-- LANGMENU -->
+{{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/langmenu/head/main.js" ) }}           <!-- head -->
+{{ if .Page.Scratch.Get "reblock_darkmode" }}                                                       <!-- foot -->
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/_general/dropdown/foot.scss" ) }}
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/_general/dropdown/foot.js" ) }}
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/langmenu/foot/main.scss" ) }}
 {{ end }}
 
 
-
-
-<!-- langmenu head -->
-
-<!-- langmenu foot -->
+<!-- HAMBURGER  -->
 {{ if .Page.Scratch.Get "reblock_hamburger" }}
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/hamburger/foot/main.scss" ) }}
 {{ end }}

@@ -1,5 +1,7 @@
+{{ $layouts := .ctx.Site.Params.themes.langmenu.layout }}
 
-<div id="lang-menu" class="lang-menu dropdown mx-1 d-hide">
+
+<div id="lang-menu" class="lang-menu {{ $layouts }} dropdown mx-1 d-hide">
     <div class="action flex align-x center-y">
         {{ partial "icons" ( dict "name" "translate" ) }}
         <p class="title no-mp ml-1 fz-85">{{- T "lang_menu" -}} </p>

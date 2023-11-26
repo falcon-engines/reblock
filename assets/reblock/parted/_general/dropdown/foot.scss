@@ -23,20 +23,22 @@
 
     .box {
         margin-top: 20px;
-        border: 1px solid #eee;
+        border: 1px solid var(--color-line-1);
         border-radius: 7px;
         overflow: hidden;
     }
 
     .item {
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid var(--color-line-1);
         padding: 12px 20px;
         list-style: none;
     }
 
     .item:hover{
-        background-color: #f7f7f7;
-        transition: ease-out 200ms;
+        background-image: var(--color-hover-2);
+        .name{
+            color: var(--color-text-1);
+        }
     }
 
     .item:nth-last-child(1) {

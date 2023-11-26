@@ -1,4 +1,6 @@
-<div id="dark-mode" class="dark-mode dropdown mx-1"> 
+{{ $layouts := .ctx.Site.Params.themes.darkmode.layout }}
+
+<div id="dark-mode" class="dark-mode {{ $layouts }} dropdown mx-1"> 
     <div class="action flex align-x">
         <p class="title no-mp fz-100">{{- T "appearance_menu" -}} </p>
         {{ partial "icons"  ( dict "ctx" .  "name" "chevron-down" ) }}

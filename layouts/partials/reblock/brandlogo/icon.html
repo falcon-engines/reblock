@@ -1,22 +1,17 @@
-{{ $model      := .Site.Params.base_model.logos }}
-{{ $darks_logo := "/static/brand/falcon.svg" }}
-{{ $light_logo := "/static/brand/falcon.svg" }}
-{{ $site_title := "" }}
-{{ $site_leads := "" }}
-{{ if .Site.Params.site_meta.logo_darks }}
-    {{ $darks_logo = .Site.Params.site_meta.logo_darks  }}
-{{ end }}
-{{ if .Site.Params.site_meta.logo_light }}
-    {{ $light_logo = .Site.Params.site_meta.logo_light  }}
-{{ end }}
-{{ if .Site.Params.title }}
-    {{ $site_title = .Site.Params.title  }}
-{{ end }}
-{{ if .Site.Params.site_meta.leads }}
-    {{ $site_leads = .Site.Params.site_meta.leads  }}
+{{ $darks_logo := "brand/falcon.webp" }}
+{{ $light_logo := "brand/falcon.webp" }}
+
+{{ if .ctx.Site.Params.site_meta.basic.logo_darks }}
+    {{ $darks_logo = .ctx.Site.Params.site_meta.basic.logo_darks  }}
 {{ end }}
 
-<a href="{{ site.Home.Permalink }}" class="site-logo flex align-x">
+{{ if .ctx.Site.Params.site_meta.basic.logo_light }}
+    {{ $light_logo = .ctx.Site.Params.site_meta.basic.logo_light  }}
+{{ end }}
+
+{{ $layouts := .ctx.Site.Params.themes.sitelogo.layout }}
+
+<a href="{{ site.Home.Permalink }}" class="site-logo {{ $layouts }} flex align-x mr-3">
     <figure class="box" data-logodark="{{ $darks_logo }}">
         <img fetchpriority="high" class="image" src="/{{ $light_logo }}" alt="{{ .Site.Params.title }} main logo" width="52" height="52">
     </figure>
