@@ -1,20 +1,20 @@
 
-{{ $site_title := "Falcon" }}
-{{ $site_leads := "" }}
+{{- $site_title := "Falcon" -}}
+{{- $site_leads := "" -}}
 
-{{ if .ctx.Site.Title }}
-    {{ $site_title = .ctx.Site.Title  }}
-{{ end }}
+{{- if .ctx.Site.Title -}}
+    {{- $site_title = .ctx.Site.Title  -}}
+{{- end -}}
 
-{{ if .ctx.Site.Params.site_meta.basic.leads }}
-    {{ $site_leads = .ctx.Site.Params.site_meta.basic.leads  }}
-{{ end }}
+{{- if .ctx.Site.Params.site_meta.basic.leads -}}
+    {{- $site_leads = .ctx.Site.Params.site_meta.basic.leads  -}}
+{{- end -}}
 
-{{ $layouts := .ctx.Site.Params.themes.sitelogo.layout }}
+{{- $layouts := .ctx.Site.Params.themes.sitelogo.layout -}}
 
-<a href="{{ site.Home.Permalink }}" class="site-logo {{ $layouts }} flex align-x mr-3">
+<a href="{{- site.Home.Permalink -}}" class="site-logo {{ $layouts }} flex align-x mr-3">
     <div class="meta">
-        {{ with $site_title }} <h2 class="title">{{ . }}</h2>{{ end }}
-        {{ with $site_leads }} <p class="leads">{{ . }}</p> {{ end }}
+        {{- with $site_title -}} <h2 class="title">{{- . -}}</h2>{{- end -}}
+        {{- with $site_leads -}} <p class="leads">{{- . -}}</p> {{- end -}}
     </div>
 </a>

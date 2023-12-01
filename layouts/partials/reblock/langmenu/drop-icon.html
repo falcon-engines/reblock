@@ -1,19 +1,19 @@
-{{ $layouts := .ctx.Site.Params.themes.langmenu.layout }}
+{{- $layouts := .ctx.Site.Params.themes.langmenu.layout -}}
 
 <div id="lang-menu" class="lang-menu {{ $layouts }} dropdown mx-1 d-hide">
     <div class="action flex align-x">
-        {{ partial "icons" ( dict "ctx" .ctx "name" "translate" ) }}
+        {{- partial "icons" ( dict "ctx" .ctx "name" "translate" ) -}}
     </div>
     <div class="menu d-hide">
         <div class="box">
-        {{ range .ctx.Site.Home.AllTranslations }}
-            {{ $class := "" }}
-            {{ if eq site.Language.Lang  .Language.Lang }}{{ $class = "active" }}{{ end }}
-            <a href="{{ .Permalink }}" class="item flex align-x">
+        {{- range .ctx.Site.Home.AllTranslations -}}
+            {{- $class := "" -}}
+            {{- if eq site.Language.Lang  .Language.Lang -}}{{- $class = "active" -}}{{- end -}}
+            <a href="{{- .Permalink -}}" class="item flex align-x">
                 <span class="check mr-1 {{ $class }}"></span>
-                <span class="name fz-85">{{ .Language.LanguageName }}</span>
+                <span class="name fz-85">{{- .Language.LanguageName -}}</span>
             </a>
-        {{ end }}
+        {{- end -}}
         </div>
     </div>
 </div>

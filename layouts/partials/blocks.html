@@ -1,80 +1,80 @@
-{{ $type := .type }}
-{{ $skin := .skin }}
+{{- $type := .type -}}
+{{- $skin := .skin -}}
 
 
-{{ if eq $type "brandlogo" }}
-    {{ $template := print "reblock/brandlogo/" $skin }}
+{{- if eq $type "brandlogo" -}}
+    {{- $template := print "reblock/brandlogo/" $skin -}}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
-        {{ partial $template ( dict "ctx" .ctx  ) }}
-    {{ else  }}
-        {{ partial "reblock/langmenu/core" ( dict "ctx"  .ctx  )  }}
-    {{ end }}
-{{ end }}
+        {{- partial $template ( dict "ctx" .ctx  ) -}}
+    {{- else  -}}
+        {{- partial "reblock/langmenu/core" ( dict "ctx"  .ctx  )  -}}
+    {{- end -}}
+{{- end -}}
 
 
-{{ if eq $type "langmenu" }}
-    {{ $template := print "reblock/langmenu/" $skin }}
+{{- if eq $type "langmenu" -}}
+    {{- $template := print "reblock/langmenu/" $skin -}}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
-        {{ partial $template ( dict "ctx"  .ctx  )  }}
-    {{ else  }}
-        {{ partial "reblock/langmenu/_default" ( dict "ctx"  .ctx  )  }}
-    {{ end }}
+        {{- partial $template ( dict "ctx"  .ctx  )  -}}
+    {{- else  -}}
+        {{- partial "reblock/langmenu/_default" ( dict "ctx"  .ctx  )  -}}
+    {{- end -}}
     {{- .ctx.Page.Scratch.Set "reblock_langmenu" true -}}
-{{ end }}
+{{- end -}}
 
 
-{{ if eq $type "darkmode" }}
-    {{ $template := print "reblock/darkmode/" $skin }}
+{{- if eq $type "darkmode" -}}
+    {{- $template := print "reblock/darkmode/" $skin -}}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
-        {{ partial $template ( dict "ctx"  .ctx  )  }}
-    {{ else  }}
-        {{ partial "reblock/darkmode/_default" ( dict "ctx"  .ctx  )  }}
-    {{ end }}
+        {{- partial $template ( dict "ctx"  .ctx  )  -}}
+    {{- else  -}}
+        {{- partial "reblock/darkmode/_default" ( dict "ctx"  .ctx  )  -}}
+    {{- end -}}
     {{- .ctx.Page.Scratch.Set "reblock_darkmode" true -}}
-{{ end }}
+{{- end -}}
 
 
-{{ if eq $type "hamburger" }}
-    {{ $template := print "reblock/hamburger/" $skin }}
+{{- if eq $type "hamburger" -}}
+    {{- $template := print "reblock/hamburger/" $skin -}}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
-        {{ partial $template ( dict "ctx"  .ctx  )  }}
-    {{ else  }}
-        {{ partial "reblock/hamburger/_default" ( dict "ctx"  .ctx  )  }}
-    {{ end }}
+        {{- partial $template ( dict "ctx"  .ctx  )  -}}
+    {{- else  -}}
+        {{- partial "reblock/hamburger/_default" ( dict "ctx"  .ctx  )  -}}
+    {{- end -}}
     {{- .ctx.Page.Scratch.Set "reblock_hamburger" true -}}
-{{ end }}
+{{- end -}}
 
 
 
-{{ if eq $type "following" }}
-    {{ $template := print "reblock/following/" $skin }}
+{{- if eq $type "following" -}}
+    {{- $template := print "reblock/following/" $skin -}}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
-        {{ partial $template ( dict "ctx" .ctx )  }}
-    {{ else  }}
-        {{ partial "reblock/following/_default" ( dict "ctx" .ctx )  }}
-    {{ end }}
+        {{- partial $template ( dict "ctx" .ctx )  -}}
+    {{- else  -}}
+        {{- partial "reblock/following/_default" ( dict "ctx" .ctx )  -}}
+    {{- end -}}
     {{- .ctx.Page.Scratch.Set "reblock_following" true -}}
-{{ end }}
+{{- end -}}
 
 
-{{ if eq $type "newsletter" }}
-    {{ $template := print "reblock/newsletter/" $skin }}
+{{- if eq $type "newsletter" -}}
+    {{- $template := print "reblock/newsletter/" $skin -}}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
-        {{ partial $template ( dict "ctx" .ctx )  }}
-    {{ else  }}
-        {{ partial "reblock/newsletter/_default" ( dict "ctx" .ctx )  }}
-    {{ end }}
+        {{- partial $template ( dict "ctx" .ctx )  -}}
+    {{- else  -}}
+        {{- partial "reblock/newsletter/_default" ( dict "ctx" .ctx )  -}}
+    {{- end -}}
     {{- .ctx.Page.Scratch.Set "reblock_newsletter" true -}}
-{{ end }}
+{{- end -}}
 
 
 
-{{ if eq $type "navigation" }}
-    {{ $template := print "reblock/navigation/" $skin }}
+{{- if eq $type "navigation" -}}
+    {{- $template := print "reblock/navigation/" $skin -}}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
-        {{ partial $template ( dict "ctx" .ctx "data" .data )  }}
-    {{ else  }}
-        {{ partial "reblock/navigation/_default" ( dict "ctx" .ctx  "data" .data )  }}
-    {{ end }}
+        {{- partial $template ( dict "ctx" .ctx "data" .data )  -}}
+    {{- else  -}}
+        {{- partial "reblock/navigation/_default" ( dict "ctx" .ctx  "data" .data )  -}}
+    {{- end -}}
     {{- .ctx.Page.Scratch.Set "reblock_navigation" true -}}
-{{ end }}
+{{- end -}}

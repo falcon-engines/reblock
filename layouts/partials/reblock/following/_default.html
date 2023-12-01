@@ -1,13 +1,13 @@
-{{ $context := .ctx }}
+{{- $context := .ctx -}}
 <div class="following mb-3">
     <div class="part-head fw-6x">Follow Us</div>
     <div class="part-body mt-2">
         <div class="cols">
-        {{ range $key, $value := .ctx.Site.Params.social_media }}
-        <a href="{{ $value }}" title="{{ $key }}" target="_blank">
-            {{ partial "icons" ( dict "ctx" $context "name" $key ) }}
+        {{- range $key, $value := .ctx.Site.Params.social_media -}}
+        <a href="{{- $value -}}" title="{{- $key -}}" target="_blank">
+            {{- partial "icons" ( dict "ctx" $context "name" $key ) -}}
         </a>
-        {{ end }}
+        {{- end -}}
         </div>
     </div>
 </div>

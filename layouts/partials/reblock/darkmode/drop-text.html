@@ -1,9 +1,9 @@
-{{ $layouts := .ctx.Site.Params.themes.darkmode.layout }}
+{{- $layouts := .ctx.Site.Params.themes.darkmode.layout -}}
 
 <div id="dark-mode" class="dark-mode {{ $layouts }} dropdown mx-1 d-hide"> 
     <div class="action flex align-x">
         <p class="title no-mp fz-100">{{- T "appearance_menu" -}} </p>
-        {{ partial "icons"  ( dict "ctx" .  "name" "chevron-down" ) }}
+        {{- partial "icons"  ( dict "ctx" .  "name" "chevron-down" ) -}}
     </div>
     <div class="menu d-hide">
         <div class="box">
