@@ -1,5 +1,6 @@
 {
     "pack" : "reblock",
+    "deps" : [ "rozard" ],
     "base" : {
         "head": {
             "styles": [ "base" ],
@@ -10,4 +11,4 @@
             "script": [ "main" ] 
         }
     }
-  }
+}
