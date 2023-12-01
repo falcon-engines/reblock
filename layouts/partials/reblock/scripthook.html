@@ -35,3 +35,10 @@
 {{ if .Page.Scratch.Get "reblock_following" }}
     {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/following/foot/main.scss" ) }}
 {{ end }}
+
+
+
+<!-- NEWSLETTER  -->
+{{ if .Page.Scratch.Get "reblock_following" }}
+    {{ partial "set-script" ( dict "ctx" . "link" "reblock/parted/newsletter/foot/main.scss" ) }}
+{{ end }}

@@ -1,7 +1,11 @@
-<div class="following">
-    <div class="part-head fw-6x fz-90">Newsletter</div>
-    <div class="part-body">
-        <div class="box">
+<div class="newsletter mb-5">
+    <div class="part-head fw-6x">Newsletter</div>
+    <div class="part-body mt-2">
+        <div class="box mb-2">
+            <label for="newsletter">news letter email</label>
+            <input id="newsletter" type="email" value=""/>
+            {{ partial "icons" ( dict "ctx" .ctx "name" "arrow-right" ) }}
         </div>
+        <div class="info fz-80">Your email is safe with us. We don't spam.</div>
     </div>
 </div>

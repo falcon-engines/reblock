@@ -53,3 +53,14 @@
     {{ end }}
     {{- .ctx.Page.Scratch.Set "reblock_following" true -}}
 {{ end }}
+
+
+{{ if eq $type "newsletter" }}
+    {{ $template := print "reblock/newsletter/" $skin }}
+    {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
+        {{ partial $template ( dict "ctx" .ctx )  }}
+    {{ else  }}
+        {{ partial "reblock/newsletter/_default" ( dict "ctx" .ctx )  }}
+    {{ end }}
+    {{- .ctx.Page.Scratch.Set "reblock_newsletter" true -}}
+{{ end }}
