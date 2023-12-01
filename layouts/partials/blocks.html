@@ -1,5 +1,7 @@
 {{ $type := .type }}
 {{ $skin := .skin }}
+
+
 {{ if eq $type "brandlogo" }}
     {{ $template := print "reblock/brandlogo/" $skin }}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
@@ -63,4 +65,16 @@
         {{ partial "reblock/newsletter/_default" ( dict "ctx" .ctx )  }}
     {{ end }}
     {{- .ctx.Page.Scratch.Set "reblock_newsletter" true -}}
+{{ end }}
+
+
+
+{{ if eq $type "navigation" }}
+    {{ $template := print "reblock/navigation/" $skin }}
+    {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
+        {{ partial $template ( dict "ctx" .ctx "data" .data )  }}
+    {{ else  }}
+        {{ partial "reblock/navigation/_default" ( dict "ctx" .ctx  "data" .data )  }}
+    {{ end }}
+    {{- .ctx.Page.Scratch.Set "reblock_navigation" true -}}
 {{ end }}

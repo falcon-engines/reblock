@@ -1,0 +1,15 @@
+{{ $data := .data }}
+{{- range $data -}}
+<div class="menu default">
+    <div class="menu-head fw-6x">{{ .Name }}</div>
+    <ul class="menu-list mt-2">
+        {{ range .Children }}
+        <li>
+        <a class="nav-item item" href="{{ index (apply (slice .URL) (.Params.urlFunc | default "relLangURL") ".") 0 }}" >
+            <span class="title name fz-90" >{{ .Name }}</span>
+        </a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}

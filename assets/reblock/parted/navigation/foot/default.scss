@@ -1,0 +1,27 @@
+.newsletter {
+
+    label{
+        opacity: 0;
+        position: fixed;
+    }
+
+    .box{
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        width: fit-content;
+    }
+
+    .icobox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        background-color: var(--color-back-1);
+    }
+
+    .icons{
+        margin-top: 6px;
+        width: 26px;
+    }
+}
