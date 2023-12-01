@@ -1,5 +1,11 @@
+{{ $context := .ctx }}
 <div class="following">
-    <div class="part-head fw-6x fz-90">Keep In Touch</div>
-    <div class="part-body">
+    <div class="part-head fw-6x">Follow Us</div>
+    <div class="part-body mt-2">
+        {{ range $key, $value := .ctx.Site.Params.social_media }}
+        <a href="{{ $value }}" title="{{ $key }}" target="_blank">
+            {{ partial "icons" ( dict "ctx" $context "name" $key ) }}
+        </a>
+        {{ end }}
     </div>
 </div>

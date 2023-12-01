@@ -4,6 +4,8 @@
     {{ $template := print "reblock/brandlogo/" $skin }}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
         {{ partial $template ( dict "ctx" .ctx  ) }}
+    {{ else  }}
+        {{ partial "reblock/langmenu/core" ( dict "ctx"  .ctx  )  }}
     {{ end }}
 {{ end }}
 
@@ -12,8 +14,10 @@
     {{ $template := print "reblock/langmenu/" $skin }}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
         {{ partial $template ( dict "ctx"  .ctx  )  }}
-        {{- .ctx.Page.Scratch.Set "reblock_langmenu" true -}}
+    {{ else  }}
+        {{ partial "reblock/langmenu/_default" ( dict "ctx"  .ctx  )  }}
     {{ end }}
+    {{- .ctx.Page.Scratch.Set "reblock_langmenu" true -}}
 {{ end }}
 
 
@@ -21,8 +25,10 @@
     {{ $template := print "reblock/darkmode/" $skin }}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
         {{ partial $template ( dict "ctx"  .ctx  )  }}
-        {{- .ctx.Page.Scratch.Set "reblock_darkmode" true -}}
+    {{ else  }}
+        {{ partial "reblock/darkmode/_default" ( dict "ctx"  .ctx  )  }}
     {{ end }}
+    {{- .ctx.Page.Scratch.Set "reblock_darkmode" true -}}
 {{ end }}
 
 
@@ -30,6 +36,20 @@
     {{ $template := print "reblock/hamburger/" $skin }}
     {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
         {{ partial $template ( dict "ctx"  .ctx  )  }}
-        {{- .ctx.Page.Scratch.Set "reblock_hamburger" true -}}
+    {{ else  }}
+        {{ partial "reblock/hamburger/_default" ( dict "ctx"  .ctx  )  }}
     {{ end }}
+    {{- .ctx.Page.Scratch.Set "reblock_hamburger" true -}}
+{{ end }}
+
+
+
+{{ if eq $type "following" }}
+    {{ $template := print "reblock/following/" $skin }}
+    {{- if templates.Exists ( print "partials/" $template  ".html" ) -}}
+        {{ partial $template ( dict "ctx" .ctx )  }}
+    {{ else  }}
+        {{ partial "reblock/following/_default" ( dict "ctx" .ctx )  }}
+    {{ end }}
+    {{- .ctx.Page.Scratch.Set "reblock_following" true -}}
 {{ end }}
