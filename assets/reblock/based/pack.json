@@ -1,0 +1,13 @@
+{
+    "pack" : "reblock",
+    "base" : {
+        "head": {
+            "styles": [ "base" ],
+            "script": [ "base" ]
+        },
+        "foot": {
+            "styles": [ "main" ],
+            "script": [ "main" ] 
+        }
+    }
+  }
