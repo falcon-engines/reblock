@@ -3,7 +3,7 @@
 
 <div id="lang-menu" class="lang-menu {{ $layouts }} dropdown mx-1 d-hide">
     <div class="action flex align-x center-y">
-        {{ partial "icons" ( dict "name" "translate" ) }}
+        {{ partial "icons" ( dict "ctx" .ctx "name" "translate" ) }}
         <p class="title no-mp ml-1 fz-85">{{- T "lang_menu" -}} </p>
     </div>
     <div class="menu d-hide">

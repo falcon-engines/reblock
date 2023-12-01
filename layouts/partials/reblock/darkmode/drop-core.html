@@ -3,7 +3,7 @@
 
 <div id="dark-mode" class="dark-mode {{ $layouts }} dropdown mx-1 d-hide"> 
     <div class="action flex align-x">
-        {{ partial "icons" ( dict "name" "dark-mode" ) }}
+        {{ partial "icons" ( dict "ctx" .ctx "name" "dark-mode" ) }}
         <p class="title no-mp fz-90 ml-1">{{- T "appearance_menu" -}} </p>
     </div>
     <div class="menu d-hide">
